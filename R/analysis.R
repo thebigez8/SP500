@@ -27,3 +27,4 @@ yearly <- dat %>%
 ggplot(yearly, aes(x = yr, y = pct.change)) +
   geom_line()
 mean(yearly$pct.change)
+prod(dat$mult, na.rm = TRUE)^(1/as.numeric((max(dat$Date) - min(dat$Date))/365.25))
